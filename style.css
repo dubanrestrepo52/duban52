@@ -3,11 +3,17 @@
 	version: 1.0
 	Author: Duban Restrepo
 	Description: Tema de la secretaría de tránsito y transporte de Yarumal.
-*/	
+*/
+
+/*Fuente importada para el botón de busqueda de la barra superior------------------------------------------------------*/
+
 @import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 .fondo{
 	background-color: #F4EBEB;
 }
+
+/*Estilos de la barra superior---------------------------------------------------------------------------------------*/
+
 .barra-superior{
 	background-color: #EDE5E5;
 	-webkit-box-shadow: 1px 2px 2px  rgba(0,0,0,0.3);
@@ -20,39 +26,10 @@
 
 .mapsite{
 	float: left;
-}
-.titulo{
-display: inline-block;
-width: 55%;
-font-size: 2rem;
-margin-top: 50px;
-
-}
-.logo{
-	
-	display: inline-block;
-	width: 13%;
 	
 }
 
-
-.escudo{
-	width: 9%;
-	height: 94%;
-	
-}
-
-
-
-.logo-alcaldia{
-	width: 16%;
-	height: 48%;
-	margin-top: 38px;
-	margin-right: 20px;
-	
-	}
-
-/*Botón de busqueda*/
+/*Botón de busqueda--------------------------------------------------------------------------------------------------*/
 #container {
   margin: auto;
   padding: 3em 0 0;
@@ -92,55 +69,165 @@ label {
   position: relative;
   left: 0.1em;
 }
+
+/*Hasta aquí los estilos de la barra superior----------------------------------------------------------------------------*/
+
+/*Estilos del encabezado-------------------------------------------------------------------------------------------------*/
+
 .cabeza{
-	display: flex;
+	display: inline-block;
 	justify-content: space-between;
 	height: 150px;
 	background-color: #EDE5E5; 
 }
-/*menú*/
-.menu{
-	margin-right: 0px;
-	margin-left: 0px;
-	width: 100%;
-	height: 50px;
+
+@media (max-width: 524px) {
+  .cabeza  {
+	display: flex;
+	justify-content: center;
+  }
 }
-.menu ul {
+
+.titulo{
+display: block;
+width: 55%;
+font-size: 2rem;
+margin-top: 50px;
+
+}
+
+
+@media (max-width: 524px) {
+  .titulo  {
+    display: none;
+  }  
+}
+
+@media (max-width: 992px) {
+  .titulo  {
+    min-width: 70%;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+.logo{
+	
+	display: block;
+	width: 140px;
+	height: 140px;
+
+	
+}
+
+
+.escudo{
+	width: 98px;
+	height: 132px;
+	display: block;
+	
+}
+@media (max-width: 992px) {
+  .escudo  {
+    display: none;
+  }
+}
+
+
+
+.logo-alcaldia{
+	width: 150px;
+	height: 70px;
+	
+	margin-top: 38px;
+	margin-right: 20px;
+	
+	}
+@media (max-width: 992px) {
+  .logo-alcaldia  {
+    display: none;
+  }
+}	
+
+/*Estilos menú header--------------------------------------------------------------------------------------------*/
+.barra-menu{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	z-index: 1000;
+}
+.navbar{
+	background-color: #3A67A6;
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	padding-right: 0rem;
+	height: 44px;
 	display: inline-block;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3A67A6;
+}
+.navbar li{
+	display: block;
+	height: 44px;
+	background-color: #3A67A6;
+
+}
+.navbar li a{
+	display: block;
+	height: 44px;
+	padding-top: 10px;
+	padding-right: 5px;
+	padding-left: 5px;
+	color: #fff;
+	text-decoration: none;
 }
 
-.menu li {
-	display: inline-block;
-    float: left;
+.navbar li a:hover{
+	background-color: #5291D9;
+	 border-bottom: 2px solid #FBF339;
 }
 
-.menu li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+/*Estilos del submenú---------------------------------------------------------------------------------------------*/
+
+.navbar li ul{
+	background-color: #5291D9;
+	padding-top: 5px;
+
+}
+.navbar li ul li{
+	height: 30px;
+	background-color: #5291D9
+}
+.navbar li ul li a{
+	height: 30px;
+	padding-top: 3px;
+}
+.navbar li ul li a:hover{
+	height: 30px;
+	background-color: #3A67A6;
+	border: 0;
+	border-top: 1px solid #FBF339;
+}
+.active a{
+	background-color: #000;
+	
 }
 
-/* Change the link color to #111 (black) on hover */
-.menu li a:hover {
-    background-color: #5291D9;
-    border-bottom: 2px solid #FBF339;
-    height: 50px;
-}
-.menu li a:focus {
-    background-color: #111;
-    border-bottom: 2px solid orange;
-}
+/*Hasta aquí los Estilos del encabezado----------------------------------------------------------------------------*/
+
+
+/*Contenedor de las secciones de las estradas de la página de inicio------------------------------------------------*/
+
 .contenedor{
 	background-color: #fff;
 }
+
+/*Sidebar de las páginas-------------------------------------------------------------------------------------------*/
+
 .side{
 	background-color: #3A67A6;
 	height: 400px;
 }
+
+
